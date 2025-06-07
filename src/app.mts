@@ -4,4 +4,12 @@ import { hideBin } from 'yargs/helpers';
 
 // console.log(hideBin(process.argv));
 
-console.log(yarg.b);
+(async () => {
+await main();
+console.log('fin del prgorama')
+
+})();
+
+async function main() {
+    console.log('main function executed');
+}
