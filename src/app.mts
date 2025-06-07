@@ -1,7 +1,12 @@
-import { yarg } from './config/plugins/yarns.plugin.mjs';
-import { hideBin } from 'yargs/helpers';
-
+import { yarg } from "./config/plugins/yarns.plugin.mjs";
+import { hideBin } from "yargs/helpers";
 
 // console.log(hideBin(process.argv));
 
-console.log(yarg.b);
+(async () => {
+  await main();
+})();
+
+async function main() {
+  console.log(yarg);
+}
