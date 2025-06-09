@@ -19,7 +19,9 @@ export const yarg = yargs(hideBin(process.argv))
     default: false,
     describe: 'show mult table',
 })
+.check((argv, options) => {
+if (argv.b < 1 ) throw ('base must be positive');
+    return true;
+})  
 
-.parseSync()
-
-;
+.parseSync();

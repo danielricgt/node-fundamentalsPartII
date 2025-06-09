@@ -1,8 +1,12 @@
-
+import { yarg } from "./config/plugins/yarns.plugin.mjs";
 import fs from 'fs';
 
+console.log(yarg);
+
+
+const {b: base, l:limit, s: show} = yarg;
 let outPutMessage = '';
-const base = 5;
+
 const headerMessage = `
 
 ========================================
@@ -12,13 +16,15 @@ TABLA DEL  ${base}
 
 `;
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= limit; i++) {
     outPutMessage += `${base} X ${i} = ${base*i}\n` 
     
 }
 
 outPutMessage= headerMessage + outPutMessage;
-console.log(outPutMessage);
+if (show) {
+    console.log(outPutMessage);
+}
 
 const outPutPath = `outputs/folder1/folder2/folder3`;
 
