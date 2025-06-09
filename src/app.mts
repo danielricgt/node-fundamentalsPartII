@@ -8,5 +8,6 @@ import { hideBin } from "yargs/helpers";
 })();
 
 async function main() {
+  console.log('main starting');
   console.log(yarg);
 }
