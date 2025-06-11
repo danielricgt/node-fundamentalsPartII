@@ -28,6 +28,6 @@ if (show) {
 
 const outPutPath = `outputs/folder1/folder2/folder3`;
 
-fs.mkdirSync(outPutPath,{recursive: true});
+fs.mkdirSync(outPutPath,{recursive: true}) ;
 fs.writeFileSync(`${outPutPath}/tabla-${base}.txt`, outPutMessage);
 console.log('file created!');
