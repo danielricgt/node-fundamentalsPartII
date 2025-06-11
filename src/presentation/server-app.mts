@@ -1,3 +1,6 @@
+import { CreateTable } from "../domain/use-cases/create-table.use-case.mjs";
+
+
 interface RunServerApp {
     base: number;
     limit: number;
@@ -6,8 +9,9 @@ interface RunServerApp {
 }
 
 export class ServerApp {
-    static run (options:RunServerApp) {
+    static run ({base, limit, showTable}: RunServerApp) {
         console.log('server run');
-        console.log(options);
+        const table =  new CreateTable().execute({base, limit});
+        console.log(table);
     }
 }
